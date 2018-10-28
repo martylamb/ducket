@@ -11,7 +11,7 @@ ducket(nsides=8, r=12, h=3);
 // same as previous, but now with crenellations for stacking
 //ducket(nsides=8, r=12, h=3, lip_h=2, lip_w=2, crenellated=true);
 
-// same as previous, but now with crenellations for stacking
+// same as previous, but now with bumps instead of crenellations for stacking
 //ducket(nsides=8, r=12, h=3, lip_h=2, lip_w=2, bumps=true);
 
 // of course you can get silly with it
