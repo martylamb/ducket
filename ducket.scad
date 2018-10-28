@@ -65,11 +65,3 @@ module ducket(r = 12.7,                 // radius of circle circumscribing the d
         if (crenellated) translate([0, 0, 0]) _crenellated_ring(r = r + 0.1, nsides = nsides, lip_w = lip_w + 0.3);
     }
 }
-
-//ducket(r = 18, nsides = 7, lip_h = 2, bumps=true);
-//ducket(r = 18, nsides = 53, lip_h = 0, bumps=true);
-//_crenellated_ring(ducket_r = 25.4, nsides = 6, lip_w = 5);
-ducket(r = 25.4 * 1.4, nsides = 4, lip_w = 7, lip_h = 0, bumps = false, bumps=true, crenellated = true);
-//_crenellated_ring(r=20, nsides=4, lip_w=5);
-
-//_regular_polygon(nsides = 4, r = 20, h = 5);
