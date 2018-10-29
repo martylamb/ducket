@@ -44,11 +44,12 @@ module ducket(r = 12.7,                 // radius of circle circumscribing the d
                 crenellated = false)    // true if crenellating the lip and underside for stacking
 {
     difference() {
+        bump_r = r - lip_w/2 - .2;
         union() {
             _regular_polygon(nsides=nsides, r=r, h=h + lip_h);
             if (bumps)
                 translate([0, 0, h + lip_h])
-                    _corner_spheres(r = r - lip_w/2, 
+                    _corner_spheres(r = bump_r, 
                                     nsides = nsides, 
                                     sphere_r = lip_w / 4);
             if (crenellated)
@@ -58,9 +59,9 @@ module ducket(r = 12.7,                 // radius of circle circumscribing the d
         union() {
             if (lip_h > 0) translate([0, 0, h]) _regular_polygon(nsides=nsides, r=r - lip_w, h=lip_h + 1);
             if (bumps)
-                _corner_spheres(r = r - lip_w/2, 
+                _corner_spheres(r = bump_r, 
                                 nsides = nsides, 
-                                sphere_r = lip_w / 4 + .4);
+                                sphere_r = lip_w / 4 + .2);
         }
         if (crenellated) translate([0, 0, 0]) _crenellated_ring(r = r + 0.1, nsides = nsides, lip_w = lip_w + 0.3);
     }
